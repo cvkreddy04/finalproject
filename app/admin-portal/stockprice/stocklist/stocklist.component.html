@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+ <meta charset="utf-8">
+
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<div class="bg">
+
+   <div class="container">
+
+    <h2 style="text-align:center;">StockPrice List</h2>
+   <br><br> <table class="table table-hover table-sm" >
+
+      <thead class="thead-light">
+  
+     <tr>
+  
+  
+  
+     <th>Companyname</th>
+  
+  
+  
+  
+  
+  
+  
+     <th>Stockexchange</th>
+  
+  
+  
+  
+  
+  
+  
+     <th>Currentprice</th>
+     <th>Date</th>
+     <th>Time</th>
+     <th>Action</th>
+  
+  
+  
+     </tr>
+  
+  
+  
+  
+  
+  
+  
+    </thead>
+  
+  
+  
+  
+  
+  
+  
+    <tbody>
+  
+  
+  
+  
+  
+  
+  
+     <tr *ngFor="let stockprice of stockList ">
+  
+  
+  
+  
+  
+  
+  
+     <td>{{stockprice.companyname}}</td>
+  
+  
+  
+  
+  
+  
+  
+     <td>{{stockprice.stockexchange}}</td>
+  
+  
+  
+  
+  
+  
+  
+     <td>{{stockprice.currentprice}}</td>
+     <td>{{stockprice.date}}</td>
+     <td>{{stockprice.time}}</td>
+  
+     <button (click)="deleteStockprice(stockprice)" class='btn btn-success'>Delete</button>&nbsp;
+  
+     <button (click)="updateStockprice(stockprice)" class='btn btn-primary'>Update</button>
+  
+  
+  
+     </tr>
+  
+  
+  
+    </tbody><br>
+  
+
+    <div class="text-center">
+      <button type="button" class="btn btn-info "><a routerLink="/stockprice">Add</a></button> &nbsp;
+      <button type="button" class="btn btn-warning "><a routerLink='/admin-portal'>Back</a></button>
+  </div>
+
+  </table>
+  
+  </div></div>
+  </html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+ <meta charset="utf-8">
+
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<div class="bg">
+
+   <div class="container">
+
+    <h2 style="text-align:center;">Ipos List</h2>
+   <br><br> <table class="table table-hover table-sm" >
+
+      <thead class="thead-light">
+
+     <tr>
+
+      <th>Ipoid</th>
+
+
+
+      <th>Companyname</th>
+
+
+
+      <th>Stockexchange</th>
+
+
+
+      <th>Pricepershare</th>
+
+
+
+      <th>Totalnoofshares</th>
+
+
+
+      <th>Opendatetime</th>
+
+      <th>Action</th>
+
+
+
+     </tr>
+
+
+
+    </thead>
+
+
+
+    <tbody>
+
+
+
+      <tr *ngFor="let ipodetails of ipodetailsList ">
+
+
+
+      <td>{{ipodetails.ipoid}}</td>
+
+
+
+      <td>{{ipodetails.companyname}}</td>
+
+
+
+      <td>{{ipodetails.stockexchange}}</td>
+
+
+
+      <td>{{ipodetails.pricepershare}}</td>
+
+
+
+      <td>{{ipodetails.totalnoofshares}}</td>
+
+
+
+      <td>{{ipodetails.opendatetime}}</td>
+
+      
+      <td><button (click)="deleteIpos(ipodetails)" class='btn btn-warning'><i class="fa fa-futboll-0">Delete</i></button> &nbsp;
+
+        <button (click)="updateIpos(ipodetails)" class='btn btn-success'
+      
+        data-toggle="modal" data-target="#myModal">Update</button>
+      
+       </td>
+
+
+
+      </tr>
+
+
+
+    </tbody><br>
+<div class="text-center">
+    <button type="button" class="btn btn-success "><a routerLink="/updateipos">Add-Ipos</a></button> &nbsp;
+    <button type="button" class="btn btn-warning "><a routerLink='/admin-portal'>Back</a></button>
+  </div>
+     </table>
+  </div>
+</div>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

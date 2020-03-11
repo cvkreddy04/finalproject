@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+
+<title>Bootstrap Sign up Form with Icons</title>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<style type="text/css">
+
+ body {
+
+    color: #fff;
+
+    background-image: url("https://images.pexels.com/photos/374857/pexels-photo-374857.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+height: 500px;
+
+
+ }
+
+ .form-control, .form-control:focus, .input-group-addon {
+
+ border-color: #e1e1e1;
+
+ }
+
+  .form-control, .btn {
+
+    border-radius: 3px;
+
+  }
+</style>
+
+</head>
+
+<body>
+
+  <div class="container" align="center" >
+
+
+ <div [hidden]="submitted" style="width: 400px;">
+
+ <form [formGroup]="ipodetailssaveform" #saveIpoDetails1 (ngSubmit)="saveIpoDetails(saveIpoDetails1)">
+
+ <h2>Add Ipodetails</h2>
+
+    <hr>
+
+
+
+    <div class="form-group">
+
+  <div class="input-group">
+
+  <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+
+  <input type="number" class="form-control" formControlName="ipoid" placeholder="ipoid" required="required">
+
+  <div class="alert alert-danger" *ngIf = "(Ipoid.touched) && (Ipoid.invalid)"
+
+        style="margin-top: 5px;">
+
+         <span *ngIf="Ipoid.errors.required">Ipoid is Required</span>
+
+        </div>
+
+  </div>
+
+ </div>
+
+    <div class="form-group">
+
+  <div class="input-group">
+
+  <span class="input-group-addon"><i class="fa fa-user"></i></span>
+
+  <input type="text" class="form-control" formControlName="companyname" placeholder="Companyname" required="required">
+
+  <div class="alert alert-danger" *ngIf = "(Companyname.touched) && (Companyname.invalid)"
+
+        style="margin-top: 5px;">
+
+         <span *ngIf="Companyname.errors.required">CompanyName is Required</span>
+
+        </div>
+
+  </div>
+
+ </div>
+
+
+
+
+
+ <div class="form-group">
+
+  <div class="input-group">
+
+  <span class="input-group-addon"><i class="fa fa-paper-plane"></i></span>
+
+  <input type="text" class="form-control" formControlName="stockexchange" placeholder="stockexchange" required="required">
+
+  <div class="alert alert-danger" *ngIf = "(Stockexchange.touched)&&(Stockexchange.invalid)"
+
+        style="margin-top: 5px;">
+
+   <span *ngIf="Stockexchange.errors.required">Stockexchange is Required</span>
+
+  </div>
+
+  </div>
+
+ </div>
+
+ <div class="form-group">
+
+  <div class="input-group">
+
+  <span class="input-group-addon"><i class="fa fa-paper-plane"></i></span>
+
+  <input type="number" class="form-control" formControlName="pricepershare" placeholder=" pricepershare" required="required">
+
+  <div class="alert alert-danger" *ngIf = "(Pricepershare.touched)&&(Pricepershare.invalid)"
+
+        style="margin-top: 5px;">
+
+   <span *ngIf="Pricepershare.errors.required">Pricepershare is Required</span>
+
+  </div>
+
+  </div>
+
+  </div>
+
+  <div class="form-group">
+
+  <div class="input-group">
+
+  <span class="input-group-addon"><i class="fa fa-paper-plane"></i></span>
+
+  <input type="number" class="form-control" formControlName="totalnoofshares" placeholder="totalnoofshares" required="required">
+
+  <div class="alert alert-danger" *ngIf = "(Totalnoofshares.touched)&&(Totalnoofshares.invalid)"
+
+        style="margin-top: 5px;">
+
+   <span *ngIf="Totalnoofshares.errors.required">Totalnoofshares is Required</span>
+
+  </div>
+
+  </div>
+
+ </div>
+
+ <div class="form-group">
+
+  <div class="input-group">
+
+  <span class="input-group-addon"><i class="fa fa-paper-plane"></i></span>
+
+  <input type="number" class="form-control" formControlName="opendatetime" placeholder="opendatetime" required="required">
+
+  <div class="alert alert-danger" *ngIf = "(Opendatetime.touched)&&(Opendatetime.invalid)"
+
+        style="margin-top: 5px;">
+
+   <span *ngIf="Opendatetime.errors.required">opendatetime is Required</span>
+
+  </div>
+
+  </div>
+
+ </div>
+
+ <div class="form-group">
+
+  <button type="submit" class="btn btn-primary btn-lg">Add</button>
+
+
+
+ </div>
+
+
+
+  </form>
+
+</div>
+
+</div>
+
+<div [hidden]="!submitted">
+
+ <h4>Ipos Updated SuccessFully!</h4>
+
+ <button (click)="ipodetailssaveform()"></button>
+
+ </div>
+
+</body>
+
+</html>
+

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+ <meta charset="utf-8">
+
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<div class="bg">
+
+  <div class="container" >
+    <h2 style="text-align:center;">Stockexchange List</h2>
+
+ <br><br><table class="table table-hover table-lg-6" >
+
+
+        
+
+  <thead class="thead-light">
+
+
+
+     <tr>
+
+
+
+      <th>stockexid</th>
+
+
+
+      <th>Stockexchange</th>
+
+
+
+      <th>Brief</th>
+
+
+
+      <th>Remarks</th>
+
+
+
+      <th>Contactaddress</th>
+
+<th>Action</th>
+    
+
+     </tr>
+
+
+
+    </thead>
+
+
+
+    <tbody>
+
+
+
+      <tr *ngFor="let Ac3 of stockexchangeList ">
+
+
+
+      <td>{{Ac3.stockexid}}</td>
+
+
+
+      <td>{{Ac3.stockexchange}}</td>
+
+
+
+      <td>{{Ac3.brief}}</td>
+
+
+
+      <td>{{Ac3.remarks}}</td>
+
+
+
+      <td>{{Ac3.contactaddress}}</td>
+
+
+
+
+
+
+      <td><button (click)="deletestockexchange(Ac3)" class='btn btn-danger'><i class="fa fa-futboll-0">Delete</i></button> &nbsp;
+
+        <button (click)="updatestockexchange(Ac3)" class='btn btn-info'
+      
+        data-toggle="modal" data-target="#myModal">Update</button>
+      
+       </td>
+
+
+
+
+      </tr>
+
+
+
+    </tbody><br>
+<div class="text-center">
+    <button type="button" class="btn btn-info "><a routerLink="/manageexchange">Add</a></button> &nbsp;
+    <button type="button" class="btn btn-warning "><a routerLink='/admin-portal'>Back</a></button>
+</div>
+
+   </table>
+  </div>
+</div>
+
+</html>
+
+
+
+
+

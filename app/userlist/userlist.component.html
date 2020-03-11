@@ -1,0 +1,88 @@
+
+     <!DOCTYPE html>
+
+     <html lang="en">
+     
+     <head>
+     
+      <meta charset="utf-8">
+     
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+     
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+     
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+     
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+     
+     </head>
+     
+     <div class="bg">
+     
+        <div class="container">
+     
+         <h2 style="text-align:center;">UserList</h2>
+        <br><br> <table class="table table-hover table-sm" >
+     
+           <thead class="thead-light">
+     
+          <tr>
+  
+            <th>Username</th>
+  
+            <th>Password</th>
+  
+            <th>Email</th>
+  
+            <th>Mobile</th>
+  
+            <th>Confirmed</th>
+  
+           
+           <th>UserType</th>
+           <th>ProfileImage</th>
+           <th>Action</th>
+          </tr>
+  
+        </thead>
+  
+        <tbody>
+  
+           <tr *ngFor="let user of userList ">
+  
+            <td>{{user.username}}</td>
+  
+            <td>{{user.password}}</td>
+  
+            <td>{{user.email}}</td>
+  
+            <td>{{user.mobile}}</td>
+  
+            <td>{{user.confirmed}}</td>
+
+            <td>{{user.usertype}}</td>
+            <td>{{user.profileimage}}</td>
+            <button (click)="deleteUser(user)" class='btn btn-warning'>Delete</button>&nbsp;
+  
+     <button (click)="updateUser(user)" class='btn btn-success'>Update</button>
+  
+           </tr>
+  
+        </tbody><br>
+  
+        <div class="text-center">
+          <button type="button" class="btn btn-info "><a routerLink="/signup">Add User</a></button> &nbsp;
+          <button type="button" class="btn btn-warning "><a routerLink='/user-portal'>Back</a></button>
+      </div>
+      </table>
+      </div></div>
+    </html>
+  
+    
+  
+  
+   
+  
+  
+  
+  

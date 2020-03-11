@@ -1,0 +1,12 @@
+th,td{
+    font-size: 16px;
+}
+
+.bg{
+    background-image: url("https://images.pexels.com/photos/317356/pexels-photo-317356.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+background-position: center;
+background-repeat: no-repeat;
+height: 1000px;
+
+}

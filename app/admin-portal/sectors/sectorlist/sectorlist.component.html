@@ -1,0 +1,76 @@
+<<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+ <meta charset="utf-8">
+
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+
+<div class="bg">
+
+  <div class="container">
+
+   <h2 style="text-align:center;">Sectors List</h2>
+  <br><br> <table class="table table-hover table-sm" >
+
+     <thead class="thead-light">
+
+  
+     <tr>
+  
+  
+  
+     <th>Sectorid</th>
+  
+     <th>Sectorname</th>
+  
+     <th>Brief</th>
+  
+     <th>Action</th>
+  
+  
+  
+     </tr>
+  
+    </thead>
+  
+    <tbody>
+  
+     <tr *ngFor="let sectors of sectorsList ">
+  
+     <td>{{sectors.sectorid}}</td>
+  
+     <td>{{sectors.sectorname}}</td>
+  
+     <td>{{sectors.brief}}</td>
+  
+     <button (click)="deleteSectors(sectors)" class='btn btn-success'>Delete</button>&nbsp;
+     <button (click)="updateSectors(sectors)" class='btn btn-primary'>Update</button>
+  
+  
+  
+     </tr>
+  
+  
+  
+    </tbody><br>
+  
+    <div class="text-center">
+      <button type="button" class="btn btn-warning "><a routerLink="/sectors">Add Sectors</a></button> &nbsp;
+      <button type="button" class="btn btn-warning "><a routerLink='/admin-portal'>Back</a></button>
+  </div>
+
+  </table>
+  
+  </div></div></html>

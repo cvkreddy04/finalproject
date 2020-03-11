@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap 4 Website Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <style>
+  .fakeimg {
+    height: 100px;
+    background: rgb(199, 196, 196);
+  }
+  .navbar a{
+    font-size: 21px;
+  }
+
+ 
+  </style>
+</head>
+<body>
+
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+  <h1><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"><i class="fa fa-bar-chart" style="font-size:80px;color:red"></i>STOCK MARKET</h1> 
+</div>
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <a routerLink="/home" class="navbar-brand">
+
+    <img src="https://img.etimg.com/thumb/msid-59738997,width-480,height-360,imgsize-21421,resizemode-4/nike.jpg" height="40" alt="StockMarket">
+
+  </a>
+  <a class="navbar-brand" routerLink="Main"><b>Home</b></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="user"><span class="glyphicon glyphicon-share-alt"></span><b>Login</b></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="signup"><span class="glyphicon glyphicon-user"></span><b>Signup</b></a>
+      </li>
+      
+      
+    </ul>
+  </div>  
+  <ul class="navbar-nav navbar-right">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="Main"><span class="glyphicon glyphicon-off"></span><b>Signout</b></a>
+    </li>
+  </ul>    
+</nav>
+<style>
+  .navbar {
+
+
+position: relative;
+
+min-height: 50px;
+
+margin-bottom: 0px !important;
+
+border: 1px solid transparent;
+
+}
+</style>
+
+</body>
+</html>
+
+<router-outlet></router-outlet>

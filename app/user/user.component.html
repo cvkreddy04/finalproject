@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+<title>Bootstrap Cool Login Form</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<style type="text/css">
+	body {
+		color: #fff;
+		background: #52565c31;
+		font-family: 'Roboto', sans-serif;
+	}
+	.form-control {		
+		min-height: 41px;
+		box-shadow: none;
+		border-color: #e1e4e5;
+	}
+	.form-control:focus {
+		border-color: #49c1a2;
+	}
+	.form-control, .btn {        
+        border-radius: 3px;
+    }
+	.login-form {
+		width: 400px;
+		margin: 0 auto;
+		padding: 100px 0;
+	}
+	.login-form form {
+		color: #2ac41c;
+		border-radius: 3px;
+    	margin-bottom: 15px;
+        background: #fff;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+        padding: 30px;
+    }
+	.login-form h2 {
+		color: rgb(211, 192, 192);
+		font-weight: bold;
+        margin-top: 0;
+    }
+    .login-form hr {
+        margin: 0 -30px 20px;
+    }    
+	.login-form .form-group {
+		margin-bottom: 20px;
+	}
+	.login-form label {
+		font-weight: normal;
+		font-size: 13px;
+	}
+	.login-form .btn {        
+        font-size: 16px;
+        font-weight: bold;
+		background: #62ac99;
+		border: none;
+		min-width: 140px;
+    }
+	.login-form .btn:hover, .login-form .btn:focus {
+		background: #a8c4be;
+        outline: none !important;
+	}
+	.login-form a {
+		color: rgb(110, 76, 76);
+		text-decoration: underline;
+	}
+	.login-form a:hover {
+		text-decoration: none;
+	}
+	.login-form form a {
+		color: #49c1a2;
+		text-decoration: none;
+	}	
+	.login-form form a:hover {
+		text-decoration: underline;
+	}
+</style>
+</head>
+<body>
+	
+	<form	[formGroup]="usersaveform" #findByUsernameAndPassword1 (ngSubmit)="findByUsernameAndPassword(findByUsernameAndPassword1)">
+	<div class="bg">
+<div class="login-form">
+		<h2>Login</h2>
+		<hr>
+        <div class="form-group">
+			<div class="form-group">
+			
+				<label>Username</label>
+				<input type="text" class="form-control" formControlName="username" data-toggle="tooltip"
+					data-placement="right" title="Enter Username">
+				<div class="alert alert-danger" *ngIf="(Username.touched) && (Username.invalid)"
+					style="margin-top: 5px;">
+					<span *ngIf="Username.errors.required">Username is Required</span>
+					<span *ngIf="Username.errors.minlength">
+						MinLength Error
+					</span>
+				</div>
+			</div>
+			<div class="form-group">
+				<label>Password</label>
+				<input type="text" class="form-control" formControlName="password" data-toggle="tooltip"
+					data-placement="right" title="Enter Password">
+				<div class="alert alert-danger" *ngIf="(Password.touched) && (Password.invalid)"
+					style="margin-top: 5px;">
+					<span *ngIf="Password.errors.required">Password is Required</span>
+					<span *ngIf="Password.errors.minlength">
+						Invalid Password
+					</span>
+				</div>
+			</div>
+		<div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block btn-lg">Login</button>
+        </div>
+</div>
+</div>
+</div>
+</form>
+</body>
+</html>                            

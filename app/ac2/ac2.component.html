@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+ <meta charset="utf-8">
+
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<div class="bg">
+
+  
+
+  
+<div class="container">
+
+ <h2 style="text-align:center;">Company-Details</h2>
+
+
+
+
+
+ <br><br><table class="table table-hover table-lg-6" >
+
+
+
+  <thead class="thead-light">
+
+
+
+   <tr>
+
+
+
+    <th>CompanyName</th>
+
+
+
+    <th>TurnOver</th>
+
+
+
+    <th>CEO Name</th>
+
+
+
+    <th>Board of Directors</th>
+
+
+
+    <th>Listed in StockExchange</th>
+
+
+
+    <th>Sector</th>
+
+    <th>Remarks</th>
+
+    <th>Stock Code</th>
+
+    <th>Action</th>
+
+
+
+
+   </tr>
+  
+
+
+  </thead>
+
+
+
+  <tbody>
+
+
+
+    <tr *ngFor="let Ac2 of companyList ">
+
+
+
+    <td>{{Ac2.companyname}}</td>
+
+
+
+    <td>{{Ac2.turnover}}</td>
+
+
+
+    <td>{{Ac2.ceoname}}</td>
+
+
+
+    <td>{{Ac2.bod}}</td>
+
+
+
+    <td>{{Ac2.listedinse}}</td>
+
+
+
+    <td>{{Ac2.sector}}</td>
+
+
+
+    <td>{{Ac2.remarks}}</td>
+
+
+
+    <td>{{Ac2.stockcode}}</td>
+
+
+    
+<td><button (click)="deleteCompany(Ac2)" class='btn btn-warning'><i class="fa fa-futboll-0">Delete</i></button> &nbsp;
+
+  <button (click)="updateCompany(Ac2)" class='btn btn-success'
+
+  data-toggle="modal" data-target="#myModal">Update</button>
+
+ </td>
+
+
+    </tr>
+
+
+
+  </tbody><br>
+
+
+
+ </table>
+
+
+
+
+
+
+
+
+
+</div>
+<div class="text-center">
+<button type="button" class="btn btn-warning "><a routerLink="/add">Add</a></button> &nbsp;
+
+<button type="button" class="btn btn-success "><a routerLink='/admin-portal'>Back</a></button>
+</div>
+</div>
+<router-outlet></router-outlet>
+</html>
